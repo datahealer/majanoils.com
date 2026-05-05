@@ -403,7 +403,7 @@ section { padding: 120px 0; }
 .section-desc {
   font-size: 0.95rem;
   color: var(--text-muted);
-  max-width: 560px;
+  max-width: 800px;
   line-height: 1.8;
   font-weight: 300;
 }
@@ -461,6 +461,94 @@ section { padding: 120px 0; }
   letter-spacing: 2px;
   color: var(--text-muted);
   font-weight: 400;
+}
+
+/* ======================== PROMOTERS ======================== */
+#promoters { background: var(--black); }
+
+.promoters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+
+.promoter-card {
+  padding: 40px 32px;
+  background: var(--dark);
+  border: 1px solid rgba(200,164,78,0.08);
+  border-radius: 2px;
+  text-align: center;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promoter-card:hover {
+  border-color: rgba(200,164,78,0.2);
+  transform: translateY(-4px);
+}
+
+.promoter-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(200,164,78,0.08);
+  border: 1px solid rgba(200,164,78,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--gold);
+}
+
+.promoter-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.promoter-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.promoter-card .promoter-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.promoter-card .promoter-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s;
+  margin-top: auto;
+}
+
+.promoter-card .promoter-link:hover {
+  color: var(--gold-light);
+}
+
+.promoter-card .promoter-link svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s;
+}
+
+.promoter-card .promoter-link:hover svg {
+  transform: translateX(3px);
 }
 
 /* ======================== SERVICES ======================== */
@@ -877,6 +965,7 @@ footer {
   .about-grid,
   .contact-grid { grid-template-columns: 1fr 1fr; }
 
+  .promoters-grid,
   .services-grid,
   .locations-grid,
   .values-grid { grid-template-columns: 1fr; }
@@ -1001,6 +1090,65 @@ body.modal-open { overflow: hidden; }
           <div class="stat-number">360&deg;</div>
           <div class="stat-label">Best Technology in the World</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROMOTERS ==================== -->
+<section id="promoters">
+  <div class="container">
+    <div class="section-tag reveal">Who's Behind Us</div>
+    <h2 class="section-title reveal">Our <span>Promoters</span></h2>
+    <p class="section-desc reveal">Majan Oils is backed by established groups with deep expertise across energy, technology, and investment.</p>
+
+    <div class="promoters-grid">
+      <div class="promoter-card reveal">
+        <div class="promoter-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3>Al Tamman Group</h3>
+        <div class="promoter-sub">Diversified conglomerate with interests across multiple industries</div>
+        <a href="http://www.altamman.com/" class="promoter-link" target="_blank" rel="noopener">
+          www.altamman.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="promoter-card reveal">
+        <div class="promoter-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Ashraf for Development &amp; Investment</h3>
+        <div class="promoter-sub">Strategic development and investment arm, powered by ZAK Solution</div>
+        <a href="http://www.zakq8.com/" class="promoter-link" target="_blank" rel="noopener">
+          www.zakq8.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="promoter-card reveal">
+        <div class="promoter-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3>Al Labeeb Group</h3>
+        <div class="promoter-sub">Established group with regional presence and cross-sector operations</div>
+        <a href="http://www.al-labeeb.com" class="promoter-link" target="_blank" rel="noopener">
+          www.al-labeeb.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>
